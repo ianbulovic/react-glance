@@ -27,7 +27,7 @@ function LinkGroup({
   links,
 }: {
   title: string;
-  color: string;
+  color: "red" | "green" | "yellow" | "blue" | "purple" | "aqua" | "orange";
   links: { title: string; url: string }[];
 }) {
   const twColor = colorMap[color];
@@ -54,7 +54,7 @@ export default function Bookmarks({
 }: {
   groups: {
     title: string;
-    color: string;
+    color: "red" | "green" | "yellow" | "blue" | "purple" | "aqua" | "orange";
     links: {
       title: string;
       url: string;
