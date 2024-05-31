@@ -1,17 +1,108 @@
 import type { Config } from "tailwindcss";
 
+const gruvbox = {
+  dark0_hard: "#1d2021",
+  dark0: "#282828",
+  dark0_soft: "#32302f",
+  dark1: "#3c3836",
+  dark2: "#504945",
+  dark3: "#665c54",
+  dark4: "#7c6f64",
+  gray_245: "#928374",
+  gray_244: "#928374",
+  light0_hard: "#f9f5d7",
+  light0: "#fbf1c7",
+  light0_soft: "#f2e5bc",
+  light1: "#ebdbb2",
+  light2: "#d5c4a1",
+  light3: "#bdae93",
+  light4: "#a89984",
+  bright_red: "#fb4934",
+  bright_green: "#b8bb26",
+  bright_yellow: "#fabd2f",
+  bright_blue: "#83a598",
+  bright_purple: "#d3869b",
+  bright_aqua: "#8ec07c",
+  bright_orange: "#fe8019",
+  neutral_red: "#cc241d",
+  neutral_green: "#98971a",
+  neutral_yellow: "#d79921",
+  neutral_blue: "#458588",
+  neutral_purple: "#b16286",
+  neutral_aqua: "#689d6a",
+  neutral_orange: "#d65d0e",
+  faded_red: "#9d0006",
+  faded_green: "#79740e",
+  faded_yellow: "#b57614",
+  faded_blue: "#076678",
+  faded_purple: "#8f3f71",
+  faded_aqua: "#427b58",
+  faded_orange: "#af3a03",
+};
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/hooks/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        dark: {
+          100: gruvbox.dark0_hard,
+          200: gruvbox.dark0,
+          300: gruvbox.dark0_soft,
+          400: gruvbox.dark1,
+          500: gruvbox.dark2,
+          600: gruvbox.dark3,
+          700: gruvbox.dark4,
+        },
+        light: {
+          100: gruvbox.light0_hard,
+          200: gruvbox.light0,
+          300: gruvbox.light0_soft,
+          400: gruvbox.light1,
+          500: gruvbox.light2,
+          600: gruvbox.light3,
+          700: gruvbox.light4,
+        },
+        red: {
+          100: gruvbox.bright_red,
+          200: gruvbox.neutral_red,
+          300: gruvbox.faded_red,
+        },
+        green: {
+          100: gruvbox.bright_green,
+          200: gruvbox.neutral_green,
+          300: gruvbox.faded_green,
+        },
+        yellow: {
+          100: gruvbox.bright_yellow,
+          200: gruvbox.neutral_yellow,
+          300: gruvbox.faded_yellow,
+        },
+        blue: {
+          100: gruvbox.bright_blue,
+          200: gruvbox.neutral_blue,
+          300: gruvbox.faded_blue,
+        },
+        purple: {
+          100: gruvbox.bright_purple,
+          200: gruvbox.neutral_purple,
+          300: gruvbox.faded_purple,
+        },
+        aqua: {
+          100: gruvbox.bright_aqua,
+          200: gruvbox.neutral_aqua,
+          300: gruvbox.faded_aqua,
+        },
+        orange: {
+          100: gruvbox.bright_orange,
+          200: gruvbox.neutral_orange,
+          300: gruvbox.faded_orange,
+        },
       },
     },
   },
