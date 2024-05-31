@@ -37,3 +37,7 @@ npm i
 ```bash
 npm run dev
 ```
+
+## Configuration
+
+You can configure the widgets by editing `src/app/page.tsx`. 
