@@ -16,3 +16,23 @@ There are plenty of missing features and probably some bugs, but this project is
 ## Screenshots
 
 ![image](screenshots/demo.png)
+
+## Getting Started
+
+1. Clone this repository
+
+```bash
+git clone https://github.com/ianbulovic/react-glance.git
+```
+
+2. Install dependencies
+
+```bash
+npm i
+```
+
+3. Run the development server
+
+```bash
+npm run dev
+```
