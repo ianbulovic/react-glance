@@ -23,6 +23,7 @@ There are plenty of missing features and probably some bugs, but this project is
 
 ```bash
 git clone https://github.com/ianbulovic/react-glance.git
+cd react-glance
 ```
 
 2. Install dependencies
