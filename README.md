@@ -12,3 +12,7 @@ There are plenty of missing features and probably some bugs, but this project is
 - [x] Search bar (currently DuckDuckGo)
 - [x] Task list
 - [x] Dino game :) 
+
+## Screenshots
+
+![image](screenshots/demo.png)
