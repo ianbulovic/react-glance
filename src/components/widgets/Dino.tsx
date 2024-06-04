@@ -35,21 +35,31 @@ export default function Dino() {
 
   // Load game
   useEffect(() => {
-    loadGame({
-      dino: {
-        path: "dino.png",
-        // @ts-ignore
-        color: fullConfig.theme.colors.aqua[200],
+    loadGame(
+      {
+        dino: {
+          path: "dino.png",
+          // @ts-ignore
+          color: fullConfig.theme.colors.aqua[200],
+        },
+        cactus: {
+          path: "cactus.png",
+          color: fullConfig.theme.colors.green[200],
+        },
+        pterodactyl: {
+          path: "pterodactyl.png",
+          color: fullConfig.theme.colors.red[200],
+        },
+        coin: {
+          path: "coin.png",
+          color: fullConfig.theme.colors.yellow[200],
+        },
       },
-      cactus: {
-        path: "cactus.png",
-        color: fullConfig.theme.colors.green[200],
+      {
+        ground: fullConfig.theme.colors.yellow[200],
+        platform: fullConfig.theme.colors.purple[200],
       },
-      pterodactyl: {
-        path: "pterodactyl.png",
-        color: fullConfig.theme.colors.red[200],
-      },
-    }).then((game) => {
+    ).then((game) => {
       setGame(game);
     });
   }, []);
@@ -77,14 +87,12 @@ export default function Dino() {
         }
       }
       game.update(dt, jumpKey, canvasRef.current!);
-
-      const ctx = canvasRef.current!.getContext("2d")!;
-      game.draw(ctx, fullConfig.theme.colors.yellow[200]);
+      game.draw(canvasRef.current!.getContext("2d")!);
     };
 
     const timeout = setTimeout(() => {
       animationFrame = requestAnimationFrame(tick);
-    }, 1000 / 60);
+    }, 1000 / 120);
 
     return () => {
       clearTimeout(timeout);

@@ -37,12 +37,13 @@ function loadAndRecolorTexture(texture: TextureInfo) {
 }
 
 export default async function loadTextures(
-  textures: TexturesInfo
+  textures: TexturesInfo,
 ): Promise<GameTextures> {
-  const [dino, cactus, pterodactyl] = await Promise.all([
+  const [dino, cactus, pterodactyl, coin] = await Promise.all([
     loadAndRecolorTexture(textures.dino),
     loadAndRecolorTexture(textures.cactus),
     loadAndRecolorTexture(textures.pterodactyl),
+    loadAndRecolorTexture(textures.coin),
   ]);
-  return { dino, cactus, pterodactyl };
+  return { dino, cactus, pterodactyl, coin };
 }

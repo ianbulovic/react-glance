@@ -9,19 +9,20 @@ class Obstacle extends Sprite {
     texture: OffscreenCanvas,
     x: number,
     y: number,
-    behavior: ObstacleBehavior = "static"
+    scale: number,
+    behavior: ObstacleBehavior = "static",
   ) {
     super(texture);
     this.position.x = x;
     this.position.y = y;
-    this.scale = 2;
+    this.scale = scale;
     this.behavior = behavior;
   }
 
-  update(dt: number) {
-    this.position.x -= 20 * dt;
+  update(dt: number, elapsedTime: number) {
+    this.position.x -= 15 * dt * (1 + elapsedTime / 60);
     if (this.behavior === "wiggle") {
-      this.position.y += Math.sin(this.position.x * 0.3) * 0.05;
+      this.position.y += Math.sin(this.position.x * 0.3 + 3) * 0.05;
     }
   }
 
